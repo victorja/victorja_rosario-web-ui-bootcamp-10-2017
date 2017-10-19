@@ -1,0 +1,50 @@
+* {
+	    border: 0.5px solid red;
+}
+
+html {
+
+    font-size: 14px;
+    font-family: monospace;
+}
+
+header, footer {
+	text-align: center;
+}
+
+.header {
+	font-size: 46px;
+}
+
+.footer {
+	font-size: 10px;
+}
+
+.content {
+	font-size: 14px;
+}
+
+.navigation {
+	font-size: 12px;
+}
+
+.sidebar {
+	font-size: 10px;
+}
+
+[class$="r"] {
+	background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+	background-color: blue;
+}
+
+/**How could you add weight to the global font definition to win over the classes added by point 3?
+*Se puede asignar al tag html un ID, asi este ganaria especificidad
+*
+*
+*Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to change 
+*the background to green without changing the inline style. How could you accomplish this?
+*Le pondria la etiqueta !important a la clase en el archivo .css
+**/
