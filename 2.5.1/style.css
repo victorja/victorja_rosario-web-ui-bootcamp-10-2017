@@ -16,7 +16,7 @@ html {
 }
 
 body {
-		background-color: #2541B2;
+	background-color: #2541B2;
 	font-family: monospace;
 	color: #FFFFFF;
 	margin-top: 0;
@@ -24,33 +24,33 @@ body {
 }
 
 .navigation{
-  display: inline-block;
-  vertical-align: top;
-  width: 25%;
-  float: left;
-  background-color: #06BEE1;
-  padding: 0.5%;
-  border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	float: left;
+	background-color: #06BEE1;
+	padding: 0.5%;
+	border-radius: 5px;
 
 }
 .content {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  float: center;
-  background-color: #1768AC;
-  padding: 0.5%;
-      border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	float: center;
+	background-color: #1768AC;
+	padding: 0.5%;
+	border-radius: 5px;
 }
 .sidebar {
-  display: inline-block;
-  vertical-align: top;
-  width: 25%;
-  float: right;
-  background-color: #06BEE1;
-  padding: 0.5%;
-    border-radius: 5px;
-    	border-collapse: collapse;
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	float: right;
+	background-color: #06BEE1;
+	padding: 0.5%;
+	border-radius: 5px;
+	border-collapse: collapse;
 }
 
 header{
@@ -91,4 +91,8 @@ footer {
 	border-radius: 10px;
 	width: 50%;
 	height: auto;
+}
+
+p {
+	margin-top: 0;
 }
