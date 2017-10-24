@@ -38,9 +38,7 @@ header h1{
 
 
 article{
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 20px;
+	padding: 0px 40px 20px 40px;
 }
 
 footer{
@@ -51,9 +49,7 @@ footer{
 
 @media (max-width: 800px){
 	article{
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-bottom: 10px;
+		padding: 0px 15px 10px 15px;
 	}
 
 	footer{
