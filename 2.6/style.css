@@ -1,0 +1,117 @@
+html {
+	box-sizing: border-box
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*, *:before, *:after { /*little aid for me */
+	box-sizing: inherit
+}
+
+@media (min-width: 550px){
+
+header {
+	display: inline-block;
+	width:35%;
+	vertical-align: top;
+}
+
+.content {
+	display: inline-block;
+	width:60%;
+	vertical-align: top;
+	margin-bottom: 2rem;
+}
+}
+
+
+.column {
+    float: left;
+	padding: 16px; /*mirar los width de overlay para entender, luego resta 16 de aca */
+  }
+
+ .column.third { 
+ 	width: 33.3%;
+ 	font-size:0; /*arregla problemas de tamanio de imagen y overlay */
+ 	position: relative;
+  }
+
+
+ img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*nuevo */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 60%; /*ajusta para que ocupe menos, si no ocupa la imagen entera */
+  left: 0;
+  right: 0;
+width: -ms-calc(100% - 32px); /*16+16=32 asi encaja el overlay a la imagen */
+  width: -moz-calc(100% - 32px);
+  width: -webkit-calc(100% - 32px);
+  width: calc(100% - 32px);
+  height: auto;
+  margin: 16px; /*de aca vienen los otros 16 restados */
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.column:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin: 0;
+  width: 95%; /*hace que el texto no quede en el centro de la imagen*/
+}
+
+
+
+@media (max-width: 550px) {
+
+header {
+	text-align: center;
+		font-size: 4vw;
+}
+
+.column{
+	float: left;
+}
+
+.column.third {
+	width:50%;
+}
+
+.text {
+	font-size: 3vw;
+}
+}
+
+
+@media (max-width: 400px){
+	.column{
+		float: none;
+	}
+
+	.column.third{
+		width: 100%;
+	}
+
+	.text {
+	font-size: 5vw;
+}
+
+}
+
