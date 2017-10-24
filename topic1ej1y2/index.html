@@ -29,7 +29,7 @@
 	<section><p>JavaScript uses a mix of terminology to describe objects found in the standard as opposed to those added by execution environments such as the browser or Node.js, and the ECMAScript 6 specification has clear definitions for each category of object. It’s important to understand this terminology to have a good understanding of the language as a whole.</p></section>
 	<section><p>When you want to compare two values in JavaScript, you’re probably used to using either the equals operator (==) or the identically equals operator (===). Many developers prefer the latter, to avoid type coercion during comparison. But even the identically equals operator isn’t entirely accurate. For example, the values +0 and -0 are considered equal by === even though they are represented differently in the JavaScript engine. Also NaN === NaN returns false, which necessitates using isNaN() to detect NaN properly.</p></section>
 	<section><p>This pattern became popular enough that ECMAScript 6 added the Object.assign() method, which behaves the same way, accepting a receiver and any number of suppliers, and then returning the receiver. The name change from mixin() to assign() reflects the actual operation that occurs. Since the mixin() function uses the assignment operator (=), it cannot copy accessor properties to the receiver as accessor properties. The name Object.assign() was chosen to reflect this distinction.</p></section>
-		<div class="wrapper"><button type="button" id="alert">Click me!</button></div>
+		<div class="wrapper"><button onclick="emergingMsg()">Click me!</button></div>
 	<footer>This article was written by <a href="#">Pedro Lopez</a></footer>
 	<section id="hidden"><p>Hello World</p></section>
 
