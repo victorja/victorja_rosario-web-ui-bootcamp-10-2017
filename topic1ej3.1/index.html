@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--AGREGO JQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Title</title>
+</head>
+<body>
+<nav>
+	<a href="#">HOME</a>
+	<a href="#">BLOG</a>
+	<a href="#">SHOP</a>
+	<a href="#">ABOUT</a>
+</nav>
+
+<header>
+	<h1>Header</h1>
+</header>
+
+<article>
+	<header><h2>I am an article</h2></header>
+	<section><p>ECMAScript 6 focuses heavily on improving the utility of objects, which makes sense because nearly every value in JavaScript is some type of object. Additionally, the number of objects used in an average JavaScript program continues to increase as the complexity of JavaScript applications increases, meaning that programs are creating more objects all the time. With more objects comes the necessity to use them more effectively.
+	ECMAScript 6 improves objects in a number of ways, from simple syntax extensions to options for manipulating and interacting with them.</p></section>
+	<section><p>JavaScript uses a mix of terminology to describe objects found in the standard as opposed to those added by execution environments such as the browser or Node.js, and the ECMAScript 6 specification has clear definitions for each category of object. It’s important to understand this terminology to have a good understanding of the language as a whole.</p></section>
+	<section><p>When you want to compare two values in JavaScript, you’re probably used to using either the equals operator (==) or the identically equals operator (===). Many developers prefer the latter, to avoid type coercion during comparison. But even the identically equals operator isn’t entirely accurate. For example, the values +0 and -0 are considered equal by === even though they are represented differently in the JavaScript engine. Also NaN === NaN returns false, which necessitates using isNaN() to detect NaN properly.</p></section>
+	<section id="appendable"><p>This pattern became popular enough that ECMAScript 6 added the Object.assign() method, which behaves the same way, accepting a receiver and any number of suppliers, and then returning the receiver. The name change from mixin() to assign() reflects the actual operation that occurs. Since the mixin() function uses the assignment operator (=), it cannot copy accessor properties to the receiver as accessor properties. The name Object.assign() was chosen to reflect this distinction.</p></section>
+		<div class="wrapper"><button onclick="jokeGetter()">Tell me a joke!</button></div>
+	<footer>This article was written by <a href="#">Pedro Lopez</a></footer>
+	<section id="hidden"><p>Hello World</p></section>
+
+</article>
+
+<footer>Bla bla bla bla bla <a href="#">BLABLABLA</a></footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
