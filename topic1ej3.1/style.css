@@ -10,6 +10,7 @@ html {
 
 body {
 	margin: 0;
+	text-align: center;
 }
 
 nav{
@@ -19,64 +20,47 @@ nav{
 	background-color: black;
 	padding-bottom: 5px;
 	padding-top: 5px;
+	text-align: left;
+}
+
+a {
+	color: grey;
+	text-decoration: none;
 }
 
 nav a{
-	text-decoration: none;
-	color: grey;
 	padding-left: 10px;
 
 }
 header h1{
 	margin-top: 30px;
-	text-align: center;
 }
 
-section{
-	text-align: center;
-}
-
-h2{
-	text-align: center;
-}
-
-article footer a{
-	text-decoration: none;
-	color: grey;
-}
 
 article{
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 20px;
+	padding: 0px 40px 20px 40px;
 }
 
 footer{
 	padding-left: 20px;
 	color: #a9a9a9;
-}
-
-footer a{
-	text-decoration: none;
-	color: grey;
+	text-align: left;
 }
 
 @media (max-width: 800px){
-article{
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-}
+	article{
+		padding: 0px 15px 10px 15px;
+	}
 
-footer{
-	padding-left: 10px;
-}
+	footer{
+		padding-left: 10px;
+	}
 }
 
 .wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #hidden{
 	display:none;
