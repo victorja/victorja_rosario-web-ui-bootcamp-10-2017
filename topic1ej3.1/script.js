@@ -15,9 +15,7 @@ function jokeGetter(){
 				list.innerHTML += myObj.value.joke;
 
 			}else if(http.status == 403 || http.status == 404){//mensajes de error
-				document.styleSheets[1].insertRule("#appendable { color: red }", 0);//si tira error lo devuelvo en rojo
-				var myErr = JSON.parse(http.status);
-				document.getElementById("appendable").innerHTML += http.statusText; //mensaje status error
+				document.getElementById("appendable").innerHTML += "<p style=\"color:red;\">"+"Error loading the joke"+"</p>"; //mensaje status error
 			}
 		}
 
