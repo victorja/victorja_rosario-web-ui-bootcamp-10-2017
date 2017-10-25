@@ -38,6 +38,8 @@ promise.then(function(jokes){
 }).catch(function(error){
 	let list = document.getElementById("appendable");
 	if(list.childNodes.length > 1){list.removeChild(list.childNodes[1]);} //si hay impreso un mensaje lo borra
-	document.getElementById("appendable").innerHTML += "<p style=\"color:red;\">"+error+"</p>";
+		var sheet = window.document.styleSheets[0];
+		sheet.insertRule('.errRed { color: red; }', sheet.cssRules.length);
+		document.getElementById("appendable").innerHTML += "<p class=\"errRed\">"+"Error loading the joke"+"</p>"; //mensaje status error
 });
 };
