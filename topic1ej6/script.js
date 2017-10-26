@@ -26,14 +26,11 @@ function createRandomArray(row,col){
     //Crea arreglo vacio
     var out=[];
     //asigna el nro de filas
-    var outerLength=row;
-
     //llena las filas(row) con numeros aleatorios
-    for(var i=0;i<outerLength;i++){
+    for(var i=0;i<row;i++){
         //asigna nro de columnas
-        var innerLength=col;
         var inner=[];
-        for(var j=0;j<innerLength;j++){
+        for(var j=0;j<col;j++){
             //llena las columnas con nros aleatorios
             inner.push(parseInt(Math.random()*10)+1);
         }
