@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Github Search</title>
+</head>
+<body>
+	<header><h1>Github Browser</h1></header>
+
+	<div class="container">
+	<section class="column half"><p>With this awesome browser you'll find every  JavaScript repository you need. From the webs to your hands in less than a second.</p>
+		<form>
+			<input type="text" placeholder="Numbers and letters only" id="searchVal">
+			<br>
+			<input type="submit" value="Search" onclick="getSubmit()">
+		</form>
+
+	</section>
+
+	<section class="column half">
+		<ul id="searchResults"></ul>
+	</section>
+	</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
