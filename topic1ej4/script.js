@@ -40,8 +40,9 @@ promise.then(function(result){
 		}
 
 	}).catch(function(error){
-		let compare = error.toString().slice(0,9); //corta los 9 primeros caracteres, serian los de TypeError, para comparar en el if
-			if(compare === "TypeError"){error="No more matches found.";};//si es error de tipo TypeError lo atrapa y cambia el mensaje
+		if(error.toString().indexOf("TypeError") !== -1){//-1 si no lo encuentra, en caso contrario otro numero
+			error="No more matches found.";
+		};
 		let sheet = window.document.styleSheets[0];
 		sheet.insertRule('.errRed { color: red; }', sheet.cssRules.length);
 		document.getElementById("searchResults").innerHTML += "<li class=\"errRed\">"+ error +"</li>";
