@@ -1,5 +1,6 @@
 //import {EventEmitter} from "./eventEmitter.js"
 var EventEmitter = require("./eventEmitter.js");
+var Actor = require("./actor.js");
 
 module.exports = class Movie extends EventEmitter {
     
@@ -10,6 +11,7 @@ module.exports = class Movie extends EventEmitter {
             this.duration = duration;
             this.startPlay = 0;
             this.currentMovieTime = 0;
+            this.cast = [];
         }
         play(){
             var date = new Date();
@@ -30,6 +32,15 @@ module.exports = class Movie extends EventEmitter {
             this.startPlay =0;
             this.currentMovieTime=0;
             this.emit('resume');
+        }
+        addCast(cast){
+            if(typeof cast[Symbol.iterator] === 'function' ){//if is an iterable(ex:array)
+                for (let obj of cast){
+                    if(obj instanceof Actor) {this.cast.push(obj)};//if is actor, push it
+                }   
+            }else if(cast instanceof Actor){//just 1 actor(cast)
+                this.cast.push(cast);
+            }
         }
     }
     /*use EXAMPLE
