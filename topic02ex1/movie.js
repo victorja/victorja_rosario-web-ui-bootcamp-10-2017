@@ -16,7 +16,7 @@ module.exports = class Movie extends EventEmitter {
         play(){
             var date = new Date();
             this.startPlay = date.getMinutes();
-            this.emit('play');
+            this.emit('play','playing');//second arg for optional logger
         }
         pause(){
             var date = new Date(); 
@@ -26,12 +26,12 @@ module.exports = class Movie extends EventEmitter {
             if(this.currentMovieTime > this.duration)
                 this.currentMovieTime = this.duration;
 
-            this.emit('pause');
+            this.emit('pause','movie paused');
         }
         resume(){
             this.startPlay =0;
             this.currentMovieTime=0;
-            this.emit('resume');
+            this.emit('resume','movie back to minute 0');
         }
         addCast(cast){
             if(typeof cast[Symbol.iterator] === 'function' ){//if is an iterable(ex:array)
