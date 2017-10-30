@@ -16,7 +16,7 @@ module.exports = class Movie extends EventEmitter {
         play(){
             var date = new Date();
             this.startPlay = date.getMinutes();
-            this.emit('play','playing');//second arg for optional logger
+            this.emit('play','playing');//second arg for optional logger obj(see logger.js)
         }
         pause(){
             var date = new Date(); 
