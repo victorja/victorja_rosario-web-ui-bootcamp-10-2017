@@ -23,3 +23,11 @@ let actors = [
 film.addCast(Dumbledore);
 film.addCast(actors);
 console.log(film.cast);
+
+//ex 5 object called social
+let Social = {
+    share: friendName=>{console.log(friendName + " shares " + film.title)},
+    like: friendName=>{console.log(friendName + " likes " + film.title)}
+}
+Object.assign(film,Social);//mixin, film mixes in with social
+film.like("Victor");
