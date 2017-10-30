@@ -3,7 +3,8 @@ module.exports = class Logger{
 
     }
     log(...infoArr){
-        for(let variable of infoArr)
+        for(let variable of infoArr){
             console.log(variable);
+        }
     }
 }
