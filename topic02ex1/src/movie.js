@@ -23,9 +23,9 @@ module.exports = class Movie extends EventEmitter {
             let time2 = date.getMinutes();
             this.currentMovieTime+= (time2 - this.startPlay);
             this.startPlay = time2;
-            if(this.currentMovieTime > this.duration)
+            if(this.currentMovieTime > this.duration){
                 this.currentMovieTime = this.duration;
-
+            }
             this.emit('pause','movie paused');
         }
         resume(){
