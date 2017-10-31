@@ -1,0 +1,11 @@
+<h1>Welcome to {{title}}</h1>
+<h2>My favourite movies</h2>
+<ul class="movies">
+  <li *ngFor="let movie of movies"
+  [class.selected]="movie === selectedMovie"
+  (click)="onSelect(movie)">
+    <span class="badge">{{movie.id}}</span>{{movie.name}}
+  </li>
+</ul>
+
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
