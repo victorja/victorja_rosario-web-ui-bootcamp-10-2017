@@ -8,11 +8,4 @@
     </li>
   </ul>
 
-  <div *ngIf="selectedMovie">
-      <h2>{{selectedMovie.name}} details!</h2>
-      <div><label>id: </label>{{ selectedMovie.id }}</div>
-  <div>
-      <label>title: </label>
-      <input [(ngModel)]="selectedMovie.name" placeholder="name" />
-    </div>
-  </div>
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
