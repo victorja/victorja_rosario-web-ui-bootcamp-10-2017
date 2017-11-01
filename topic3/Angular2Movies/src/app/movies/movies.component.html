@@ -7,5 +7,9 @@
     <span class="badge">{{movie.id}}</span>{{movie.name}}
   </li>
 </ul>
-
-<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+<div *ngIf="selectedMovie">
+    <h2>
+        {{selectedMovie.name | uppercase}} is my movie
+    </h2>
+    <button (click)="goToDetail()">View Details</button>
+</div>

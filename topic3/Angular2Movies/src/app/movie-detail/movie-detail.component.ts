@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/switchMap';
+
 import { Movie } from '../models/movie';
 import { MovieService } from '../services/movie.service';
 
@@ -15,10 +18,16 @@ export class MovieDetailComponent implements OnInit {
 
   constructor(
     private movieService: MovieService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
 
   ngOnInit() {
+    this.route.params.switchMap((params: Params) =>
+    this.movieService.getMovie(+params['id'])).subscribe(movie => this.movie = movie);
   }
+  goBack(): void {
+    this.location.back();
+}
 
 }

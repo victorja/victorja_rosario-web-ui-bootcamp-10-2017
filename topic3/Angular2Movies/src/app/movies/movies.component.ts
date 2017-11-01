@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Movie } from '../models/movie';
 import { MovieService } from '../services/movie.service';
+
 
 @Component({
   selector: 'app-movies',
@@ -13,7 +16,8 @@ export class MoviesComponent implements OnInit {
   movies: Movie[];
   selectedMovie: Movie;
 
-  constructor(private movieService: MovieService) { }
+  constructor(  private movieService: MovieService,
+                private router: Router) { }
 
       getMovies(): void {
           this.movieService.getMovies().then(movies => this.movies = movies);
@@ -26,5 +30,9 @@ export class MoviesComponent implements OnInit {
       onSelect(movie: Movie): void {
           this.selectedMovie = movie;
       }
+
+      goToDetail(): void {
+        this.router.navigate(['/detail', this.selectedMovie.id]);
+    }
 
 }
