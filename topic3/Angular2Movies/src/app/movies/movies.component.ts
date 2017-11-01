@@ -38,9 +38,19 @@ export class MoviesComponent implements OnInit {
     add(name: string): void {
         name = name.trim();
         if (!name) { return; }
-        let newId: number = (this.movies.reduce((prev, current) => (prev.id > current.id) ? prev : current)).id;
+        let newId: number;
+        if(this.movies.length > 0) {
+        newId = (this.movies.reduce((prev, current) => (prev.id > current.id) ? prev : current)).id;
         newId++;
+        }else{
+        newId = 1;
+        }
         this.movies.push(new Movie(newId, name));
       }
+      delete(movie: Movie): void {
+        this.movies = this.movies.filter(m => m.name !== movie.name);
+        }
 
-}
+      }
+
+

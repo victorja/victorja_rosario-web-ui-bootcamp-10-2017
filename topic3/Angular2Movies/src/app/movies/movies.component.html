@@ -10,7 +10,10 @@
   <li *ngFor="let movie of movies"
   [class.selected]="movie === selectedMovie"
   (click)="onSelect(movie)">
-    <span class="badge">{{movie.id}}</span>{{movie.name}}
+    <span class="badge">{{movie.id}}</span>
+    <span>{{movie.name}}</span>
+    <button class="delete"
+    (click)="delete(movie); $event.stopPropagation()">x</button>
   </li>
 </ul>
 <div *ngIf="selectedMovie">
