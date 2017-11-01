@@ -38,11 +38,9 @@ export class MoviesComponent implements OnInit {
     add(name: string): void {
         name = name.trim();
         if (!name) { return; }
-        this.movieService.create(name)
-          .then(movie => {
-            this.movies.push(movie);
-            this.selectedMovie = null;
-          });
+        let newId: number = (this.movies.reduce((prev, current) => (prev.id > current.id) ? prev : current)).id;
+        newId++;
+        this.movies.push(new Movie(newId, name));
       }
 
 }
