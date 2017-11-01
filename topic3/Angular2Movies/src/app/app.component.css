@@ -1,0 +1,8 @@
+a {
+    color: red;
+    text-decoration: none;
+    padding-right: 25px;
+}
+a:hover {
+    color: rgb(160, 10, 10);
+}

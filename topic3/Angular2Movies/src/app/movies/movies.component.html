@@ -5,7 +5,6 @@
     </button>
   </div>
 <h1>Welcome to {{title}}</h1>
-<h2>My favourite movies</h2>
 <ul class="movies">
   <li *ngFor="let movie of movies"
   [class.selected]="movie === selectedMovie"

@@ -15,7 +15,9 @@
     box-sizing: border-box;
     }
     h3 {
-    text-align: center; margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 40px;
     }
     h4 {
     position: relative;
@@ -32,13 +34,13 @@
     color: #eee;
     max-height: 120px;
     min-width: 120px;
-    background-color: #607D8B;
-    border-radius: 2px;
+    background-color: rgb(250, 83, 61);
+    border-radius: 10px;
     }
     .module:hover {
     background-color: #EEE;
     cursor: pointer;
-    color: #607d8b;
+    color: #a32904;
     }
     .grid-pad {
     padding: 10px 0;
