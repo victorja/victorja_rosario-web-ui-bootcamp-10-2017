@@ -35,4 +35,14 @@ export class MoviesComponent implements OnInit {
         this.router.navigate(['/detail', this.selectedMovie.id]);
     }
 
+    add(name: string): void {
+        name = name.trim();
+        if (!name) { return; }
+        this.movieService.create(name)
+          .then(movie => {
+            this.movies.push(movie);
+            this.selectedMovie = null;
+          });
+      }
+
 }

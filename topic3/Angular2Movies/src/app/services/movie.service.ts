@@ -12,4 +12,8 @@ export class MovieService {
 getMovie(id: number): Promise<Movie> {
   return this.getMovies().then(movies => movies.find(movie => movie.id === id));
 }
+create(name: string): Promise<Movie> {
+  let newFilm = new Movie(33, name);
+  return Promise.resolve(newFilm);
+}
 }

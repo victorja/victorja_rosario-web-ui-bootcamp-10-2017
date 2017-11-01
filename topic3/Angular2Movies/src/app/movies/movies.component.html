@@ -1,3 +1,9 @@
+<div>
+    <label>Movie name:</label> <input #heroName />
+    <button (click)="add(movieName.value); movieName.value=''">
+      Add
+    </button>
+  </div>
 <h1>Welcome to {{title}}</h1>
 <h2>My favourite movies</h2>
 <ul class="movies">
