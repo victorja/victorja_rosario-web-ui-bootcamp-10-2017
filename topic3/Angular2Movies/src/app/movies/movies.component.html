@@ -1,17 +1,17 @@
 <div>
     <label>Movie name:</label> <input #movieName />
-    <button type ="submit" (click)="add(movieName.value); movieName.value=''">
+    <button type="submit" (click)="add(movieName.value); movieName.value=''">
       Add
     </button>
   </div>
 <h1>Welcome to {{title}}</h1>
 <ul class="movies">
   <li *ngFor="let movie of movies"
-  [class.selected]="movie === selectedMovie"
+  ng-class="movie === selectedMovie"
   (click)="onSelect(movie)">
     <span class="badge">{{movie.id}}</span>
     <span>{{movie.name}}</span>
-    <button type="submit" class="delete"
+    <button  type="submit" class="delete"
     (click)="delete(movie)">x</button>
   </li>
 </ul>
