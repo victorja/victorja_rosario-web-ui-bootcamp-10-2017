@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import { Movie } from '../models/movie';
+import { Movie } from '../models/movie.model';
 import { MovieService } from '../services/movie.service';
 
 @Component({
