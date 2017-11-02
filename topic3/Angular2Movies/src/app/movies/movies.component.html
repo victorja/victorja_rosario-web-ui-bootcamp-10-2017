@@ -1,0 +1,23 @@
+<div>
+    <label>Movie name:</label> <input #movieName />
+    <button type="submit" (click)="add(movieName.value); movieName.value=''">
+      Add
+    </button>
+  </div>
+<h1>Welcome to {{title}}</h1>
+<ul class="movies">
+  <li *ngFor="let movie of movies"
+  ng-class="movie === selectedMovie"
+  (click)="onSelect(movie)">
+    <span class="badge">{{movie.id}}</span>
+    <span>{{movie.name}}</span>
+    <button  type="submit" class="delete"
+    (click)="delete(movie)">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedMovie">
+    <h2>
+        {{selectedMovie.name | uppercase}} is my movie
+    </h2>
+    <button type="submit" (click)="goToDetail()">View Details</button>
+</div>
