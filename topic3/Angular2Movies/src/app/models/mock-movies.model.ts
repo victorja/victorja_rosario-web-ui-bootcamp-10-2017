@@ -1,4 +1,4 @@
-import { Movie } from './movie';
+import { Movie } from './movie.models';
 
 export const MOVIES: Movie[] = [
     { id: 11, name: 'Spongebob' },
