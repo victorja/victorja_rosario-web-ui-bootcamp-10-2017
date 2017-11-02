@@ -1,6 +1,6 @@
 <div>
     <label>Movie name:</label> <input #movieName />
-    <button (click)="add(movieName.value); movieName.value=''">
+    <button type ="submit" (click)="add(movieName.value); movieName.value=''">
       Add
     </button>
   </div>
@@ -11,8 +11,8 @@
   (click)="onSelect(movie)">
     <span class="badge">{{movie.id}}</span>
     <span>{{movie.name}}</span>
-    <button class="delete"
-    (click)="delete(movie); $event.stopPropagation()">x</button>
+    <button type="submit" class="delete"
+    (click)="delete(movie)">x</button>
   </li>
 </ul>
 <div *ngIf="selectedMovie">
