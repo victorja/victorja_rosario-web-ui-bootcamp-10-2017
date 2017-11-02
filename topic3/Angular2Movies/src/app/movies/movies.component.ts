@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Movie } from '../models/movie';
+import { Movie } from '../models/movie.model';
 import { MovieService } from '../services/movie.service';
 
 
