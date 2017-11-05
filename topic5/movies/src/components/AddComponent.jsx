@@ -33,20 +33,43 @@ handleKeyPress = (event) => {//enables to add when pressing enter on keyboard
 }
 
 deleteMovie(index) {
-    let movieArr = this.state.movies;
-    movieArr.splice(index,1);//remove the movie from array
-    this.setState({movies: movieArr})
+    const movies = this.state.movies;
+    const newMovies = [
+        ...movies.slice(0, index),
+        ...movies.slice(index + 1)
+    ];
+    this.setState({
+        movies: newMovies
+    });
+    // Notice movies !== new Movies
+    // and movies still contains all the previous values
 }
 
 
+editMovie(index,value){
+    const movies = this.state.movies;
+    const newMovies = movies.map((movie, i) => {
+        if (i !== index) {
+            return movie;
+        }
+        return value;
+    });
+    this.setState({ movies: newMovies });
+    // Notice movies !== new Movies
+    // and movies still contains the previous values
+}
+
 	render(){
         let movie = this.state.movies.map((val,key)=> {//prints on screen list of movies see line55
-            return <Movie 
+            return (<Movie 
             key={key} 
             text={val} 
             deleteMethod={() => this.deleteMovie(key)}
-            
+            editMethod={this.editMovie.bind(this, key)}
              />
+
+            );
+
         });
 
 		return (
@@ -60,7 +83,9 @@ deleteMovie(index) {
                     />
 				<button onClick={this.addMovie.bind(this)}>Add</button>
                 {movie}
-			</div>
+
+                </div>
+
 		);
 	}
 }
