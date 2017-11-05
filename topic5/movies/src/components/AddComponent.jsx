@@ -41,7 +41,12 @@ deleteMovie(index) {
 
 	render(){
         let movie = this.state.movies.map((val,key)=> {//prints on screen list of movies see line55
-            return <Movie key={key} text={val} deleteMethod={() => this.deleteMovie(key)} />
+            return <Movie 
+            key={key} 
+            text={val} 
+            deleteMethod={() => this.deleteMovie(key)}
+            
+             />
         });
 
 		return (
