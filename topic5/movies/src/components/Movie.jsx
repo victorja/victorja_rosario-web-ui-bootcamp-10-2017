@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './Movie.css';
 
 class Movie extends Component{
 	constructor(props){
@@ -16,11 +16,12 @@ class Movie extends Component{
 
 	render(){
 		return(
-			<div>
+			<div className="box">
 				{this.props.text}
 				<button onClick={this.props.deleteMethod}>X</button>
 				<input value={this.props.newMovieName} 
 					onChange={evt => this.updateInputValue(evt)}
+					className="editInputBox"
 				/> 
 				<button onClick={() => this.props.editMethod(this.state.inputValue)}>edit</button>
                 

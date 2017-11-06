@@ -60,7 +60,7 @@ editMovie(index,value){
 }
 
 	render(){
-        let movie = this.state.movies.map((val,key)=> {//prints on screen list of movies see line55
+        let movie = this.state.movies.map((val,key)=> {//prints on screen list of movies
             return (<Movie 
             key={key} 
             text={val} 

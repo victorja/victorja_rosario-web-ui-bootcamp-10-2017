@@ -12,9 +12,6 @@ class Navbar extends Component {
 				<Link className="favs" to="/movies">
 					<p>Favorite movies</p>
 				</Link>
-				<Link className="create" to="/">
-					<p>Create</p>
-				</Link>
 			</nav>
 		);
 
