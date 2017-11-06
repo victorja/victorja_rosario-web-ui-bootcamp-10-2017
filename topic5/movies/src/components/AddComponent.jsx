@@ -41,8 +41,6 @@ deleteMovie(index) {
     this.setState({
         movies: newMovies
     });
-    // Notice movies !== new Movies
-    // and movies still contains all the previous values
 }
 
 
@@ -55,8 +53,7 @@ editMovie(index,value){
         return value;
     });
     this.setState({ movies: newMovies });
-    // Notice movies !== new Movies
-    // and movies still contains the previous values
+
 }
 
 	render(){
