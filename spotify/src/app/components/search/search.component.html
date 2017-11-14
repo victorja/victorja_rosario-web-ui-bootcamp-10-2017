@@ -1,0 +1,17 @@
+<h1>Need music? Use this awesome track finder and playlist creator</h1>
+<p>Music is life. Enjoy!</p>
+<div *ngIf="!buttonShow()">
+  <input [formControl]="inputField" type="text" id="keyword" placeholder="Search for tracks..." autofocus>
+</div>
+<ul class="filter-select">
+  <div *ngFor="let result of searchResults">
+    <li class="filter-select-list">
+      <img src="{{result.album.images['2']?.url}}" alt="{{result.name}}" width="50" height="50">
+      <p class="artist-name">{{result.name}}, ({{result.artists[0].name}})</p>
+      <button (click)="addLocal(result)">+ local</button>
+    </li>
+  </div>
+</ul>
+<div *ngIf="buttonShow()">
+<button (click)="this.searchService.logIn()">Log in first</button>
+</div>
