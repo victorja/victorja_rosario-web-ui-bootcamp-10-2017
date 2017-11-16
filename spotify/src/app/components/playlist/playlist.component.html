@@ -1,0 +1,13 @@
+<h1>This is your local playlist</h1>
+<button (click)="this.searchService.createPlaylist()">Save playlist in Spotify</button>
+<div>
+<ul>
+<div *ngFor="let track of trackList">
+<li>
+  <img src="{{track.album.images['2']?.url}}" alt="{{track.name}}" width="50" height="50">
+  <p class="artist-name">{{track.name}}, ({{track.artists[0].name}})</p>
+</li>
+
+</div>
+</ul>
+</div>
