@@ -13,7 +13,7 @@ const routes: Routes = [
     {path: 'search', component: SearchComponent},
     {path: 'playlist', component: PlaylistComponent}
 ];
-//https://accounts.spotify.com/authorize?client_id=5fd743af4a3844aaa3d7f15f3d321ef9&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fsearch&response_type=token&state=123
+
 @NgModule({
     imports: [
         BrowserModule,
