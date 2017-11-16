@@ -23,15 +23,10 @@ export class SearchComponent {
 
       this.inputField.valueChanges
       .subscribe(inputField => this.searchService.searchTracks(inputField)
-      .subscribe(result => {
-        if (result.status === 400) {
-          return;
-        }else if (result.status === 401){
-          this.searchService.refreshToken();
-        }else {
-          this.searchResults = result.tracks.items;
-        }
-      }));
+      .subscribe(result => this.searchResults = result.tracks.items,
+                error => {console.log(error.status);
+                this.searchService.refreshToken(); }
+      ));
     }
 
     getCode(){
